@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dishan Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px 5px;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .features {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: #667eea;
+            color: white;
+            transform: rotate(360deg) scale(1.1);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Test Dishan</h1>
+            <p class="subtitle">A Modern Web Experience</p>
+        </header>
+        
+        <div class="main-content">
+            <h2>About This Page</h2>
+            <p>This is a beautifully designed HTML page showcasing modern web development techniques including responsive design, CSS Grid, Flexbox, and interactive elements.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>🎨 Modern Design</h3>
+                    <p>Clean, contemporary design with smooth gradients and elegant typography that looks great on all devices.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📱 Responsive Layout</h3>
+                    <p>Fully responsive design that adapts beautifully to desktop, tablet, and mobile screens using CSS Grid and Flexbox.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>⚡ Interactive Elements</h3>
+                    <p>Engaging hover effects, smooth transitions, and interactive components that enhance user experience.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🚀 Performance Optimized</h3>
+                    <p>Lightweight, fast-loading code with optimized CSS and minimal dependencies for excellent performance.</p>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h2>Key Features</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <strong>HTML5</strong>
+                    </div>
+                    <div class="feature-item">
+                        <strong>CSS3</strong>
+                    </div>
+                    <div class="feature-item">
+                        <strong>Responsive</strong>
+                    </div>
+                    <div class="feature-item">
+                        <strong>Modern</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <button class="btn" onclick="showAlert()">Click Me!</button>
+                <button class="btn" onclick="changeTheme()">Change Theme</button>
+                <button class="btn" onclick="animateCards()">Animate Cards</button>
+            </div>
+            
+            <div id="message" style="text-align: center; margin: 1rem 0; padding: 1rem; border-radius: 10px; display: none;"></div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Test Dishan. Created with ❤️ using modern web technologies.</p>
+        </footer>
+    </div>
+    
+    <script>
+        function showAlert() {
+            const messageDiv = document.getElementById('message');
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+            messageDiv.style.color = 'white';
+            messageDiv.innerHTML = '🎉 Hello! This is an interactive element. JavaScript is working perfectly!';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 3000);
+        }
+        
+        function changeTheme() {
+            const body = document.body;
+            const isLight = body.style.background.includes('667eea');
+            
+            if (isLight || !body.style.background) {
+                body.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+            } else {
+                body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+            
+            const messageDiv = document.getElementById('message');
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = 'linear-gradient(45deg, #ff6b6b, #ee5a52)';
+            messageDiv.style.color = 'white';
+            messageDiv.innerHTML = '🎨 Theme changed! The background gradient has been updated.';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 2000);
+        }
+        
+        function animateCards() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.transform = 'scale(1.1) rotate(5deg)';
+                    card.style.transition = 'all 0.5s ease';
+                    
+                    setTimeout(() => {
+                        card.style.transform = 'scale(1) rotate(0deg)';
+                    }, 500);
+                }, index * 200);
+            });
+            
+            const messageDiv = document.getElementById('message');
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = 'linear-gradient(45deg, #9b59b6, #8e44ad)';
+            messageDiv.style.color = 'white';
+            messageDiv.innerHTML = '✨ Cards are dancing! Animation sequence triggered.';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Add some interactive effects on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Test Dishan page loaded successfully!');
+            
+            // Add scroll effect to header
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                header.style.transform = `translateY(${rate}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
